@@ -1,38 +1,246 @@
-.App {
+.all {
+  background-color: #92bccd;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  overflow: scroll;
+  padding-top: 20px;
+  font-family: "Lato", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* HOME PAGE */
+.home-photo {
+  position: relative;
+  margin-bottom: 40px;
+}
+.home-photo h1 {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .home-photo h1 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .home-photo h1 {
+    font-size: 46px;
+  }
+}
+.rijks-photo {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 100% 20%;
+}
+@media (min-width: 992px) {
+  .rijks-photo {
+    object-position: 90% 30%;
+  }
+}
+.text-presentation {
+  font-size: 14px;
+  text-align: justify;
+}
+@media (min-width: 992px) {
+  .text-presentation {
+    font-size: 16px;
+  }
+}
+.carousel {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.img-carousel {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 100% 20%;
+}
+@media (min-width: 992px) {
+  .img-carousel {
+    height: 600px;
+  }
+}
+.title-carousel {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.text-carousel {
+  font-size: 14px;
+  text-align: justify;
+}
+@media (min-width: 992px) {
+  .text-carousel {
+    font-size: 16px;
+  }
+}
+.button-text-to-collection {
+  margin-right: 10px;
+}
+.button-to-collection {
+  margin-bottom: 10px;
+}
+.labels {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.labels > div :hover {
+  cursor: pointer;
+}
+.one-label > img {
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+  object-fit: cover;
+  object-position: 100% 20%;
+  border-radius: 10px;
+}
+.one-label > p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .one-label > img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (min-width: 992px) {
+  .one-label > img {
+    width: 220px;
+    height: 220px;
+  }
+  .one-label > p {
+    font-size: 16px;
+  }
+}
+
+/* ABOUT MUSEUM */
+
+.museum-photo {
+  width: 100%;
+}
+/* LIST VIEW */
+.startIcon {
+  text-align: center;
+}
+.startIcon:hover {
+  cursor: pointer;
+}
+.sort {
+  margin-top: 30px;
+}
+.pagination {
+  margin-top: 20px;
+}
+/* CARDS */
+.card {
+  background-color: #92bccd !important;
+  border: none !important;
+  margin-top: 50px;
+  color: #ffffff;
+}
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card-title {
+  height: 50px;
+  overflow: scroll;
+  color: #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* DETAILED VIEW*/
+.artwork-title {
+  font-size: 24px;
+}
+.artwork-label {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.artwork-image {
+  width: 250px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.artwork-image:hover {
+  cursor: pointer;
+}
+.artwork-description {
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.artwork-dimensions {
+  font-size: 14px;
+  padding: 10px;
+}
+.modal-image {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*FAVORITES*/
+.favorite-header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.favorite-header > h2 {
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favorite-title {
+  height: 72px;
+  overflow: scroll;
+  color: #ffffff;
+  text-align: center;
+}
+.favorite-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: 100% 20%;
+  border-radius: 10px;
+}
+.favorite-star-empty :hover {
+  cursor: pointer;
+}
+.favorite-star-empty > svg {
+  border: white solid thin;
+  border-radius: 50%;
+  margin-right: 50%;
+  margin-left: 50%;
+  margin-top: 10px;
+  padding: 3px;
+}
+.favorite-star-fill :hover {
+  cursor: pointer;
+}
+.favorite-star-fill > svg {
+  border: white solid thin;
+  border-radius: 50%;
+  margin-right: 50%;
+  margin-left: 50%;
+  margin-top: 10px;
+  padding: 3px;
 }
