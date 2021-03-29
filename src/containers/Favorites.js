@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 const Favorites = () => {
   let cookies = Cookies.get("favori");
   let favorites = JSON.parse(cookies);
+  console.log("cookies",cookies)
   return (
     <div>
       <div className="favorite-header">
@@ -20,7 +21,6 @@ const Favorites = () => {
       </div>
       <p className="favorite-text">Here you can store your 3 favorite masterpieces.</p>
       <Row>{favorites.map((element, index) => {
-        console.log("favorite",favorites)
         return (
           <Col sm={6} md={4} lg={4} className="card">
             <Link to={"/collection/" + element.objectNumber}>

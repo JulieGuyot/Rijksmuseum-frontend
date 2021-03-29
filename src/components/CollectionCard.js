@@ -13,7 +13,7 @@ const CollectionCard = ({element, favorites, setFavorites }) => {
                 <Link to={"/collection/" + element.objectNumber}>
                 <img className="card-image" src={element.webImage.url} width="200px"/>
                 </Link>
-                <div 
+                <div  
                 onClick={(event)=> {
                   const searchIndex = favorites.findIndex((fav) => {
                     console.log({fav})
