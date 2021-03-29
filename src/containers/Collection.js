@@ -20,9 +20,7 @@ const Collection = ({ favorites, setFavorites }) => {
  
     const fetchData = async () => {
         const response = await axios.get(
-          `http://localhost:3000/collection?&p=${page}&ps=${20}&s=${sort}&involvedMaker=${searchArtist}`
-        );
-        console.log(response.data.artObjects);
+          `https://rijksmuseum-backend.herokuapp.com/collection?&p=${page}&ps=${20}&s=${sort}&involvedMaker=${searchArtist}`);
         setData(response.data);
         setIsLoading(false);
       };
@@ -64,6 +62,8 @@ const Collection = ({ favorites, setFavorites }) => {
         </Row>
         <Row>
         {data.artObjects.map((element, index) => {
+          console.log(element)
+          if(element.id !== "en-SK-A-2815")
           return (
             <Col sm={6} md={4} lg={3} className="card">
               <CollectionCard element={element} favorites={favorites} setFavorites={setFavorites}/>

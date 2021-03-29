@@ -10,7 +10,7 @@ const CollectionDetails = () => {
 
   const fetchData = async () => {
     const response = await axios.get(
-      `http://localhost:3000/collection/` + objectNumber
+      `https://rijksmuseum-backend.herokuapp.com/collection/` + objectNumber
     );
     setData(response.data);
     setIsLoading(false);

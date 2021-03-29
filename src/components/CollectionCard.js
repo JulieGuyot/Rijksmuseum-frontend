@@ -14,7 +14,6 @@ const CollectionCard = ({element, favorites, setFavorites }) => {
                 <img className="card-image" src={element.webImage.url} width="200px"/>
                 </Link>
                 <div 
-                classname="starIcon" 
                 onClick={(event)=> {
                   const searchIndex = favorites.findIndex((fav) => {
                     console.log({fav})
@@ -25,11 +24,11 @@ const CollectionCard = ({element, favorites, setFavorites }) => {
                     newFavorites.push(element);
                     setisFavorite(true)
                     alert("L'oeuvre a bien été ajoutée aux favoris");
+                    Cookies.set("favori", JSON.stringify(newFavorites), { expires: 30 });
                   } else {
                     newFavorites.splice(element, 1);
                     alert("L'oeuvre a déjà été ajoutée aux favoris");
                   }
-                  Cookies.set("favori", JSON.stringify(newFavorites), { expires: 30 });
                   setFavorites(newFavorites);
                 }}>
                 {isFavorite === false ? 
