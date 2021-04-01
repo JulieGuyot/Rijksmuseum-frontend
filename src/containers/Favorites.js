@@ -5,9 +5,8 @@ import Row from 'react-bootstrap/Row'
 import Cookies from "js-cookie";
 
 const Favorites = () => {
-  let cookies = Cookies.get("favori");
-  let favorites = JSON.parse(cookies);
-  console.log("cookies",cookies)
+  const favorites = JSON.parse(Cookies.get('favori'));
+  console.log("favorite", favorites)
   return (
     <div>
       <div className="favorite-header">

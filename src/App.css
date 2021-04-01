@@ -1,11 +1,11 @@
 .all {
   background-color: #7faec3;
+  overflow: scroll;
+  height: 100vh;
 }
 .container {
   width: 100%;
-  height: 100vh;
   color: #ffffff;
-  overflow: scroll;
   padding-top: 20px;
   font-family: "Lato", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
