@@ -16,7 +16,7 @@ function App() {
     <div className="all">
       <Router>
         <Header></Header>
-        <Container className="container">
+        <div className="view">
         <Switch>
           <Route path="/collection/:objectNumber">
             <CollectionDetails/>
@@ -31,7 +31,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-        </Container>
+        </div>
         <Footer></Footer>
       </Router>
     </div>

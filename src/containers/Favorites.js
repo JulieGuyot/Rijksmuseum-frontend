@@ -5,8 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Cookies from "js-cookie";
 
 const Favorites = () => {
-  const favorites = JSON.parse(Cookies.get('favori'));
-  console.log("favorite", favorites)
+  const favorites = JSON.parse(Cookies.get('favori') || null );
   return (
     <div>
       <div className="favorite-header">
@@ -19,6 +18,9 @@ const Favorites = () => {
         </svg>
       </div>
       <p className="favorite-text">Here you can store your 3 favorite masterpieces.</p>
+      {favorites === null ? 
+      <div className="no-favorite">You don't have favorite masterpieces yet</div>
+      :
       <Row>{favorites.map((element, index) => {
         return (
           <Col sm={6} md={4} lg={4} className="card">
@@ -29,7 +31,7 @@ const Favorites = () => {
           </Col>
         )
       })} 
-      </Row>
+      </Row>}
     </div>
   ) 
 };

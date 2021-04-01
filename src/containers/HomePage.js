@@ -87,7 +87,6 @@ const HomePage = () => {
           />
         </Carousel.Item>
       </Carousel>
-      
     </div>
   ) 
 };
