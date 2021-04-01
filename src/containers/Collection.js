@@ -65,7 +65,7 @@ const Collection = ({ favorites, setFavorites }) => {
           console.log(element)
           if(element.id !== "en-SK-A-2815")
           return (
-            <Col sm={6} md={4} lg={3} className="card">
+            <Col sm={4} md={4} lg={3} className="card">
               <CollectionCard element={element} favorites={favorites} setFavorites={setFavorites}/>
             </Col>
           )})
