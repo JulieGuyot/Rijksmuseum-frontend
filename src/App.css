@@ -100,8 +100,8 @@
   cursor: pointer;
 }
 .one-label > img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   margin-top: 20px;
   object-fit: cover;
   object-position: 100% 20%;
@@ -218,6 +218,11 @@
 .favorite-header > h2 {
   margin-left: 20px;
   margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .favorite-header > h2 {
+    font-size: 24px;
+  }
 }
 .favorite-text {
   margin-top: 20px;

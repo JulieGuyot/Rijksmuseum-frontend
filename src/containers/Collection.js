@@ -47,7 +47,9 @@ const Collection = ({ favorites, setFavorites }) => {
             <input
               placeholder="Search an artist"
               type="text"
-              onChange={handleChange}></input>
+              onChange={handleChange}
+              className="mb-3">
+            </input>
           </Col>
           <Col sm={6} md={8} lg={9}>
             <DropdownButton as={ButtonGroup} variant="secondary" title="Sort results" id="bg-vertical-dropdown-1">
