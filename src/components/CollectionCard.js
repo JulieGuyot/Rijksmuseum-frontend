@@ -28,11 +28,11 @@ const CollectionCard = ({element, favorites, setFavorites }) => {
                   if (searchIndex === -1) {
                     newFavorites.push(element);
                     setisFavorite(true)
-                    alert("L'oeuvre a bien été ajoutée aux favoris");
+                    alert("The artwork has been added to favorites");
                     Cookies.set("favori", JSON.stringify(newFavorites), { expires: 30 });
                   } else {
                     newFavorites.splice(element, 1);
-                    alert("L'oeuvre a déjà été ajoutée aux favoris");
+                    alert("The artwork has already been added to favorites");
                   }
                   setFavorites(newFavorites);
                 }}>

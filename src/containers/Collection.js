@@ -55,10 +55,10 @@ const Collection = ({ favorites, setFavorites }) => {
             <DropdownButton as={ButtonGroup} variant="secondary" title="Sort results" id="bg-vertical-dropdown-1">
               <Dropdown.Item eventKey="1" onClick={()=>setSort("chronologic")}>Sort results chronologically (oldest first)</Dropdown.Item>
               <Dropdown.Item eventKey="2" onClick={()=>setSort("achronologic")}>Sort results chronologically (newest first).</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={()=>setSort("relevance")}>Sort results on relevance</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={()=>setSort("artist")}>Sort results on artist (a-z).</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={()=>setSort("artistdesc")}>Sort results on artist (z-a).</Dropdown.Item>
-              <Dropdown.Item eventKey="2" onClick={()=>setSort("")}>Cancel sorting</Dropdown.Item>
+              <Dropdown.Item eventKey="3" onClick={()=>setSort("relevance")}>Sort results on relevance</Dropdown.Item>
+              <Dropdown.Item eventKey="4" onClick={()=>setSort("artist")}>Sort results on artist (a-z).</Dropdown.Item>
+              <Dropdown.Item eventKey="5" onClick={()=>setSort("artistdesc")}>Sort results on artist (z-a).</Dropdown.Item>
+              <Dropdown.Item eventKey="6" onClick={()=>setSort("")}>Cancel sorting</Dropdown.Item>
             </DropdownButton>
         </Col>
         </Row>
